@@ -659,4 +659,213 @@
 // console.log(rps("rock", "scissors"));
 // console.log(rps("rock", "rock"));
 
-// // 24 CodeWars
+// // 24 CodeWars Middle string
+// function getMiddle(str) {
+//   return str.substr(Math.ceil(str / 2 - 1), 2 - (str.length % 2));
+// }
+
+// console.log(getMiddle("test"));
+// console.log(getMiddle("dfmxofjrojtesting"));
+// console.log(getMiddle("middle"));
+// console.log(getMiddle("A"));
+
+// // 25 CodeWars Pow
+// function squareSum(numbers) {
+//   return numbers.reduce((acc, number) => (acc += Math.pow(number, 2)), 0);
+// }
+// console.log(squareSum([1, 0, 2]));
+
+// // 25 CodeWars WHILE
+// function nbYear(p0, percent, aug, p) {
+//   let fullYear = 0;
+//   while (p0 <= p) {
+//     p0 += Math.floor((p0 * percent) / 100 + aug);
+//     fullYear += 1;
+//   }
+//   return fullYear;
+// }
+
+// console.log(nbYear(1500, 5, 100, 5000));
+// console.log(nbYear(1500000, 2.5, 10000, 2000000));
+
+// // 26 CodeWars Longest strig
+// function longest(s1, s2) {
+//   s1 = s1.split("");
+//   s2 = s2.split("");
+//   return [...s1, ...s2]
+//     .filter((el, i, arr) => i === arr.indexOf(el))
+//     .sort()
+//     .join("");
+// }
+// console.log(longest("aretheyhere", "yestheyarehere"));
+
+// // 27 CodeWars replaceAll  - Голосні букви
+
+// function disemvowel(str) {
+//   return str.replace(/[aeiou]/gi, "");
+// }
+// console.log(disemvowel("aaAAfggtraAD"));
+
+// // 28 CodeWars
+// function areYouPlayingBanjo(name) {
+//     return name[0] === "r" || name[0] === "R"
+//     ? `${name} plays banjo`
+//     : `${name} does not play banjo`;
+// }
+// console.log(areYouPlayingBanjo("Rio"));
+
+// // 29 CodeWars PIN TEST
+
+// // // 1
+
+// function validatePIN(pin) {
+//   return /^\d+$/.test(pin) && [4, 6].includes(pin.length);
+// }
+// // // 2
+
+// function validatePIN(pin) {
+//   return /^\d{4}$|^\d{6}$/.test(pin);
+// }
+
+// console.log(validatePIN("qw1r"));
+// console.log(validatePIN("12.0"));
+// console.log(validatePIN("705."));
+// console.log(validatePIN("1234"));
+
+// // 30 CodeWars  TEST
+
+// function sameCase(a, b) {
+//   if (a.match(/[a-z]/) && b.match(/[a-z]/)) {
+//     return 1;
+//   }
+//   if (a.match(/[A-Z]/) && b.match(/[A-Z]/)) {
+//     return 1;
+//   }
+//   if (b.match(/[a-z]/) && a.match(/[A-Z]/)) {
+//     return 0;
+//   }
+//   if (a.match(/[a-z]/) && b.match(/[A-Z]/)) {
+//     return 0;
+//   }
+//   return -1;
+// }
+
+// // 31 CodeWars array
+
+// function findAverage(array) {
+//     return array.length === 0 ? 0 : array.reduce((acc, el) => acc + el, 0) / array.length;
+// }
+
+// console.log(findAverage([]));
+// console.log([1, 2].length);
+
+// // 32 CodeWars array
+
+// // 1
+// function findOdd(A) {
+//   const numberOfNumbers = A.reduce((acc, number) => {
+//     if (!acc.hasOwnProperty(number)) {
+//       acc[number] = 0;
+//     }
+//     acc[number] += 1;
+//     return acc;
+//   }, {});
+//   const values = Object.values(numberOfNumbers);
+//   const key = Object.keys(numberOfNumbers);
+//   const findInd = values.findIndex((el) => el % 2 !== 0);
+
+//   return +key[findInd];
+// }
+
+// //2
+// const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+// // 3
+// function findOdd(A) {
+//   var obj = {};
+//   A.forEach(function (el) {
+//     obj[el] ? obj[el]++ : (obj[el] = 1);
+//   });
+
+//   for (prop in obj) {
+//     if (obj[prop] % 2 !== 0) return Number(prop);
+//   }
+// }
+// console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+// console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]));
+// console.log(findOdd([7]));
+
+// // 32 CodeWars array
+
+// // // 1
+// function digitize(n) {
+//   const arr = n.toString().split("").reverse();
+//   let numArr = [];
+//   arr.forEach((el) => {
+//     el = +el;
+//     numArr.push(el);
+//   });
+//   return numArr;
+// }
+// // // 2
+// function digitize(n) {
+//   return Array.from(String(n), Number).reverse();
+// }
+// console.log(digitize(35231));
+// console.log(digitize(0));
+
+// // 33 CodeWars array
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   classPoints.push(yourPoints);
+//   return classPoints.reduce(
+//     (total, studentPoints) => total + studentPoints,
+//     0
+//   ) /
+//     classPoints.length <
+//     yourPoints
+//     ? true
+//     : false;
+// }
+
+// console.log(betterThanAverage([90, 95, 80], 99));
+// console.log(betterThanAverage([2, 3], 5));
+
+// // 34 CodeWars array
+
+// function countPositivesSumNegatives(input) {
+//   let positivesSum = [];
+//   let negativesSum = 0;
+//   if (input === null) return [];
+//   input.forEach((el) => {
+//     if (el > 0) {
+//       positivesSum.push(el);
+//     } else if (el < 0) {
+//       negativesSum += el;
+//     }
+//   });
+
+//   if (input.length === 0) return [];
+//   else return [positivesSum.length, negativesSum];
+// }
+// console.log(
+//   countPositivesSumNegatives([
+//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
+//   ])
+// );
+// console.log(countPositivesSumNegatives([0, 0, 0]));
+// console.log(countPositivesSumNegatives([]));
+// // console.log(countPositivesSumNegatives());
+// console.log([0, 0, 0]);
+// console.log([0, 0, 0].length);
+
+// // 35 CodeWars Array
+
+// function oddOrEven(array) {
+//   return array.reduce((acc, el) => acc + el, 0) % 2 === 0 ? "even" : "odd";
+// }
+
+// console.log("oddOrEven", oddOrEven([0, 1, 4]));
+// console.log("oddOrEven", oddOrEven([0, -1, -5]));
+// console.log("oddOrEven", oddOrEven([0]));
+
+// // 36 CodeWars 
