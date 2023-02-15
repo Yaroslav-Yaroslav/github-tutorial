@@ -868,4 +868,158 @@
 // console.log("oddOrEven", oddOrEven([0, -1, -5]));
 // console.log("oddOrEven", oddOrEven([0]));
 
-// // 36 CodeWars 
+// // 36 CodeWars Point(Highest Scoring Word)
+
+// function high(x) {
+//   const abcArr = [
+//     "a",
+//     "b",
+//     "c",
+//     "d",
+//     "e",
+//     "f",
+//     "g",
+//     "h",
+//     "i",
+//     "j",
+//     "k",
+//     "l",
+//     "m",
+//     "n",
+//     "o",
+//     "p",
+//     "q",
+//     "r",
+//     "s",
+//     "t",
+//     "u",
+//     "v",
+//     "w",
+//     "x",
+//     "y",
+//     "z",
+//   ];
+//   const stringArr = x.split(" ");
+//   const pointArr = stringArr.map((el) => {
+//     let pointEl = 0;
+//     const letterArr = [...el];
+//     letterArr.forEach((e) => {
+//       pointEl += abcArr.indexOf(e) + 1;
+//     });
+//     return pointEl;
+//   });
+
+//   const maxPoint = Math.max(...pointArr);
+//   const maxPointIndex = pointArr.indexOf(maxPoint);
+
+//   return winerString = stringArr[maxPointIndex];
+
+// }
+
+// /*
+// 1. розбити строку на масив слів
+// 2. перебрати масив слів мапом - повернути масив чисел *очок*
+// 3. знайти максимальний результатат. повернути індех
+// 4. вивести слово по індексу.
+
+// */
+// console.log(high("abad aba"));
+
+// // 37 CodeWars ALPHABET
+
+// function alphabetPosition(text) {
+//   const abcArr = [
+//     "a",
+//     "b",
+//     "c",
+//     "d",
+//     "e",
+//     "f",
+//     "g",
+//     "h",
+//     "i",
+//     "j",
+//     "k",
+//     "l",
+//     "m",
+//     "n",
+//     "o",
+//     "p",
+//     "q",
+//     "r",
+//     "s",
+//     "t",
+//     "u",
+//     "v",
+//     "w",
+//     "x",
+//     "y",
+//     "z",
+//   ];
+//   text = text.toLowerCase().match(/[a-z]/g);
+//   console.log("text", text);
+//   if (text === null) return "";
+//   return text.map((el) => abcArr.indexOf(el) + 1).join(" ");
+
+// варіан із валідною строкою(в якій є хоча б одна літера)
+//   return text
+// .toLowerCase()
+// .match(/[a-z]/g) =
+// .map((el) => abcArr.indexOf(el) + 1)
+// .join(" ");
+// }
+/*
+1. привести до нижнього регістру, залишити в строкі тільки літери, залити в масив.
+2. масив мепнути з виводом "індехОф + 1" 
+3. джоін по пробілу.
+// */
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+// console.log(alphabetPosition(":*4^?3+8"));
+
+// // 38 CodeWars
+// function accum(s) {
+//   return [...s]
+//     .map(
+//       (letter, index) =>
+//         letter.toUpperCase() + letter.toLowerCase().repeat(index)
+//     )
+//     .join("-");
+// }
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// console.log("accum", accum("abcd"));
+// console.log("accum", accum("RqaEzty"));
+
+// // 39 CodeWars LONGEST
+
+// function longestConsec(strarr, k) {
+//   if (strarr.length < k || strarr.length === 0 || k <= 0) {
+//     return "";
+//   }
+//   let longest = "";
+//   for (let i = 0; i < strarr.length; i += 1) {
+//     const tempStr = strarr.slice(i, i + k).join("");
+//     if (tempStr.length > longest.length) {
+//       longest = tempStr;
+//     }
+//   }
+//   return longest;
+// }
+// console.log(
+//   longestConsec(
+//     ["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"],
+//     2
+//   )
+// );
+// console.log(
+//   longestConsec(["wlwsasphmxx", "owiaxujylentrklctozmymu", "wpgozvxxiu"], 2)
+// );
+// console.log(longestConsec(["zone", "abigail", "theta"], 5));
+// console.log(longestConsec(["zone", "abigail", "theta"], -5));
+// console.log(longestConsec(["zone", "abigail", "theta"], 0));
+// console.log(longestConsec([], 2));
+// // // 40 CodeWars ^)
+// const greet = () => "hello world!";
+
+// // 41 CodeWars

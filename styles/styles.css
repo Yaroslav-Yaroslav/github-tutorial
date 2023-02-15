@@ -1,23 +1,33 @@
 .title {
-    font-weight: 400;
-    font-family: Tangerine;
+  font-weight: 400;
+  font-family: Tangerine;
 }
 
 .text {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 pre {
-    font-family: 'Arial', 'Helvetica', sans-serif;
-    color: #2a2a2a;
-    font-size: 16px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: #2a2a2a;
+  font-size: 16px;
 }
 pre::first-letter {
-    font-family: 'Tahoma', serif;
-    font-size: 32px;
-    color: #f44336;
+  font-family: "Tahoma", serif;
+  font-size: 32px;
+  color: #f44336;
 }
 pre::selection {
-    color: gold;
-    background-color:aqua
+  color: gold;
+  background-color: aqua;
+}
+
+.feed {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 500ms linear 1s;
+}
+.appear {
+  opacity: 1;
+  transform: translateX(0);
 }
