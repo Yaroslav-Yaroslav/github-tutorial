@@ -1,0 +1,29 @@
+{
+  "name": "github-tutorial",
+  "version": "1.0.0",
+  "description": "Тест",
+  "main": "test-node.js",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel ",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaroslav-Yaroslav/github-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaroslav-Yaroslav/github-tutorial/issues"
+  },
+  "homepage": "https://github.com/Yaroslav-Yaroslav/github-tutorial#readme",
+  "dependencies": {
+    "joi": "^17.7.1",
+    "nanoid": "^4.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

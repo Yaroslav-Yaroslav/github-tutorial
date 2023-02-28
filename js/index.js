@@ -1023,3 +1023,78 @@
 // const greet = () => "hello world!";
 
 // // 41 CodeWars
+
+// function removeSmallest(numbers) {
+//   const minNum = Math.min(...numbers);
+//   const indexNum = numbers.indexOf(minNum);
+//   const newArray = [...numbers];
+//   const deleteMinNum = newArray.splice(indexNum, 1);
+//   return newArray;
+// }
+
+// console.log(removeSmallest([1, 2, 3, 4, 5]));
+// console.log(removeSmallest([5, 3, 2, 1, 4]));
+
+// // 42 CodeWars
+
+// function sumMix(x) {
+//   return x.reduce((acc, num) => acc + Number(num), 0);
+// }
+// console.log(sumMix([9, 3, "7", "3"]));
+
+// // 43 CodeWars
+
+// function points(games) {
+//   return games.reduce((acc, game) => {
+//     if (game[0] > game[2]) {
+//       console.log("game[0]:", game[0]);
+//       return acc + 3;
+//     }
+//     if (game[0] < game[2]) {
+//       console.log("game[0]:", game[0]);
+//       return acc;
+//     }
+//     if ((game[0] = game[2])) {
+//       console.log("game[0]:", game[0]);
+//       return acc + 1;
+//     }
+//   }, 0);
+// }
+
+// console.log(
+//   points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"])
+// );
+
+// // // 44 CodeWars
+
+// function DNAStrand(dna) {
+//   return [...dna]
+//     .map((letter) => {
+//       if (letter === "A") {
+//         return "T";
+//       }
+//       if (letter === "T") {
+//         return "A";
+//       }
+//       if (letter === "C") {
+//         return "G";
+//       }
+//       if (letter === "G") {
+//         return "C";
+//       }
+//     })
+//     .join("");
+// }
+
+// console.log(DNAStrand("ATTGC"));
+
+// // 44 CodeWars
+
+function getSum(a, b) {
+  let sum = 0;
+  for (let i = a; i <= b; i += 1) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(getSum(1, 10));
