@@ -1090,11 +1090,28 @@
 
 // // 44 CodeWars
 
-function getSum(a, b) {
-  let sum = 0;
-  for (let i = a; i <= b; i += 1) {
-    sum += i;
-  }
-  return sum;
-}
-console.log(getSum(1, 10));
+// function getSum(a, b) {
+//   let sum = 0;
+//   for (let i = a; i <= b; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(getSum(1, 10));
+
+// // 45 CodeWars
+
+import { getPokemonCard } from "./pokemon-card.js";
+const refs = {
+  cardContainer: document.querySelector(".card-container"),
+};
+
+fetch("https://pokeapi.co/api/v2/pokemon/8")
+  .then((responce) => responce.json())
+  .then((pokemon) => {
+    console.log(pokemon);
+    const markup = getPokemonCard(pokemon);
+    console.log(markup);
+    refs.cardContainer.innerHTML = markup;
+  })
+  .catch((error) => console.log(error));

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Тест",
   "main": "test-node.js",
+  "type": "module",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel ",
